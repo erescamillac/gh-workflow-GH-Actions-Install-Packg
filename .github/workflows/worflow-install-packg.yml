@@ -1,0 +1,16 @@
+# Workflow's name.
+name: Install Packages Workflow
+# El evento que dispara el workflow, es este caso un [push] al repositorio.
+on: [push]
+# Jobs to be executed in the workflow.
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Instalacion de paquetes
+      # apt-get install ...
+      run: |
+        echo "Instalando paquetes..."
+        echo "Hola, mundo by EEC!" >> hola.txt
+        cat hola.txt
