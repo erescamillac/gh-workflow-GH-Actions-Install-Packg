@@ -29,8 +29,9 @@ jobs:
     - name: Verify node version
       run: node --version
 
-    - name: Instalacion de dependencias [package.json]
-      run: npm install
+    # OMITIR [npm install] dado que NO existe el archivo [package.json]
+    #- name: Instalacion de dependencias [package.json]
+      #run: npm install
 
     - name: Setup PHP Action [PHP environment]
       uses: shivammathur/setup-php@2.34.1
