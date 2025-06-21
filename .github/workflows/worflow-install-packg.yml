@@ -24,7 +24,18 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v4.4.0
       with:
-        node-version: '14'
+        node-version: latest
 
     - name: Verify node version
       run: node --version
+
+    - name: Instalacion de dependencias [package.json]
+      run: npm install
+
+    - name: Setup PHP Action [PHP environment]
+      uses: shivammathur/setup-php@2.34.1
+      with:
+        php-version: '8.3'
+
+    - name: Verify PHP version
+      run: php --version
