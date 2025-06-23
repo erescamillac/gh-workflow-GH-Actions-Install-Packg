@@ -1,0 +1,9 @@
+name: "My custom-eec action"
+description: "Test my custom-eec action"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Hola Mundo step
+      run: echo "Hola Mundo (My custom-eec action)"

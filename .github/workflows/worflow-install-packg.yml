@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4.2.2
     - name: Instalacion de paquetes
       # apt-get install ...
       # uso de '|' pipe para definir 'scripts' de varias lineas (MULTI-LINE)
@@ -40,3 +40,7 @@ jobs:
 
     - name: Verify PHP version
       run: php --version
+
+    - name: Ejecución de [My custom-eec action]
+      # Por convención se usa el nombre del directorio de la acción (GH-Actions busca automáticamente el archivo [action.yml] en el directorio especificado)
+      uses: ./.github/actions/custom-action101-eec
