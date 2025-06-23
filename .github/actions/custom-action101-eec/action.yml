@@ -7,3 +7,4 @@ runs:
   steps:
     - name: Hola Mundo step
       run: echo "Hola Mundo (My custom-eec action)"
+      shell: bash
