@@ -44,3 +44,5 @@ jobs:
     - name: Ejecución de [My custom-eec action]
       # Por convención se usa el nombre del directorio de la acción (GH-Actions busca automáticamente el archivo [action.yml] en el directorio especificado)
       uses: ./.github/actions/custom-action101-eec
+      with:
+        person-name: "Erick Escamilla C." # Parámetro de entrada definido en [action.yml]

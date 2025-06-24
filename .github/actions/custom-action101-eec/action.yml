@@ -1,10 +1,17 @@
 name: "My custom-eec action"
 description: "Test my custom-eec action"
 
+# La directiva [inputs] define los parámetros de entrada que la acción acepta.
+inputs:
+  person-name:
+    description: "Nombre de la persona a saludar"
+    required: true
+    default: "{person's-name}"
+
 runs:
   using: "composite"
 
   steps:
     - name: Hola Mundo step
-      run: echo "Hola Mundo (My custom-eec action)"
+      run: echo "Hola Mundo, ${{inputs.person-name}}! (My custom-eec action)"
       shell: bash
